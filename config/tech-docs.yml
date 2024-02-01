@@ -1,23 +1,21 @@
 # Host to use for canonical URL generation (without trailing slash)
-host: https://docs.example.com
+host: 
 
 # Header-related options
 show_govuk_logo: true
-service_name: My First Service
-service_link: /
+service_name: IDP Doc
+service_link: http://localhost:4567
 phase: Beta
 
 # Links to show on right-hand-side of header
 header_links:
+  About: http://localhost:4567/about.html
+  Get Started: http://localhost:4567/get-started.html
   Documentation: /
-  Expired page: /expired-page.html
-  Expired with owner: /expired-page-with-owner.html
-  Not expired page: /not-expired-page.html
-  Single page nav: /single-page-nav.html
+  Support: http://localhost:4567/support.html
 
-footer_links:
-  Accessibility: /hidden-page.html
-  Hidden Page: /hidden-page.html
+# Enables search functionality. This indexes pages only and is not recommended for single-page sites.
+enable_search: true
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
 ga_tracking_id:
@@ -31,25 +29,11 @@ collapsible_nav: true
 # Table of contents depth – how many levels to include in the table of contents.
 # If your ToC is too long, reduce this number and we'll only show higher-level
 # headings.
-max_toc_heading_level: 6
+max_toc_heading_level: 2
 
 # Prevent robots from indexing (e.g. whilst in development)
 prevent_indexing: false
 
-google_site_verification: dstbao8TVS^DRVDS&rv76
-
-enable_search: true
-
 show_contribution_banner: true
-
-github_repo: alphagov/example-repo
-github_branch: source
-
-redirects:
-  /something/old.html: /index.html
-
-api_path: source/pets.yml
-
-# Optional global settings for the page review process
-owner_slack_workspace: gds
-default_owner_slack: '#2nd-line'
+github_repo: mouhajer-co/ruby-doc
+github_branch: main
